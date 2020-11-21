@@ -2,21 +2,24 @@ const express = require('express')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
+const arrayting = require('../utils/vectorGenerator')
 
-const db = require('../db/mongoose')
+require('../db/mongoose')
 
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.use(bodyParser.urlencoded({extended: true}))
-app.use(cors())
+//app.use(cors())
 app.use(bodyParser.json)
-
-db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 app.get('/', (req,res) => {
     res.send('Hello World')
 })
+
+
+arrayting(['Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science'])
+
 
 
 app.listen(port, () => console.log(`Server runnning on port ${port}`))
