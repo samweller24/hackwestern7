@@ -13,6 +13,7 @@ function initCourseArray(courseList){
   .on('end', () => {
       console.log('Parsing Complete') 
       initUserVector(courseList) 
+     
     });
 }
 
@@ -23,12 +24,11 @@ function initUserVector(courseList){
     }
     console.log('User Array Created')
     buildCourseVector(courseList)
+    
 }
 
 function buildCourseVector(courseList){
     courseList.forEach(element => {
-        console.log('element: ' + element)
-        console.log('reslts' + results[0])
         for (let index = 0; index < results.length; index++) {
             if(element == results[index]){
                 userCourseVector[index] = userCourseVector[index] + 1
@@ -37,13 +37,19 @@ function buildCourseVector(courseList){
         }
     });
 
-    console.log('Course Vector: ' + userCourseVector)
-
+    vectorize(userCourseVector)
 }
 
+function vectorize(userCourseVector){
+    for (let index = 0; index < userCourseVector.length; index++) {
+        userCourseVector[index] = userCourseVector[index]/userCourseVector.length % 3
+    }
+    console.log(userCourseVector)
+}
 
- function generateVector(courseList) {
+ async function generateVector(courseList) {
     initCourseArray(courseList)
+    
 }
 
 

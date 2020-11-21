@@ -17,8 +17,9 @@ app.get('/', (req,res) => {
     res.send('Hello World')
 })
 
+ arrayting(['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'])
+ 
 
-arrayting(['Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science','Actuarial Science'])
 
 
 
