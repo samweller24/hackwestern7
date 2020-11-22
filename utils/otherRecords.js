@@ -1,3 +1,10 @@
+//const params = ['Rehabilitation Sciences','Physiology and Pharmacology','Physiology and Pharmacology','Microbiology and Immunology','Microbiology and Immunology','Medical Sciences'];
+//const params = ['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'];
+//const params = ['Transitional Justice','Mathematics','Software Engineering','Software Engineering','Software Engineering','Mathematics'];
+//const params = ['Mechatronic Systems Engineering','Hebrew','Hindu','World Literatures and Cultures','Mathematics','Theatre Studies'];
+//const params = ['Statistical Sciences','Medical Health Informatics','Neuroscience','Kinesiology','Microbiology and Immunology','Medical Sciences'];
+
+
 const otherRecords = [[
     0.007874015748031496, 0, 0,
                        0, 0, 0,
