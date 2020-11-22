@@ -4,6 +4,8 @@ const bodyParser = require('body-parser')
 
 const arrayting = require('../utils/vectorGenerator')
 const cos = require('../utils/cosineSimilarity')
+const map = require('../utils/courseMap')
+const map2 = require('../utils/otherMap')
 
 require('../db/mongoose')
 
@@ -18,18 +20,22 @@ app.get('/', (req,res) => {
     res.send('Hello World')
 })
 
-const params = ['Statistical Sciences','Medical Health Informatics','Neuroscience','Kinesiology','Microbiology and Immunology','Medical Sciences'];
-//const params = ['Rehabilitation Sciences','Physiology and Pharmacology','Physiology and Pharmacology','Microbiology and Immunology','Microbiology and Immunology','Medical Sciences'];
-//const params = ['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'];
-//const params = ['Transitional Justice','Mathematics','Software Engineering','Software Engineering','Software Engineering','Mathematics'];
-//const params = ['Mechatronic Systems Engineering','Hebrew','Hindu','World Literatures and Cultures','Mathematics','Theatre Studies'];
+const params = ['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'];
 const otherRecords = require('../utils/otherRecords');
 
 (async function(params,otherRecords) {
     await arrayting(params).then(data => {
+        var max = 0
+        var score = 0
         otherRecords.forEach(element => {
-            console.log(cos(data,element))
+            if(cos(data,element)> max){
+                max = element
+                score = cos(data,element)
+            }
+            
         });
+        console.log('Highest Similarity: ' + score + ' with record: ' + map.get(max.toString))
+        console.log('Suggested Courses: ' + map2.get(map.get(max.toString).toString))
     })
 })(params, otherRecords)
 
