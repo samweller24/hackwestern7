@@ -18,56 +18,18 @@ app.get('/', (req,res) => {
     res.send('Hello World')
 })
 
-const params = ['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'];
-const otherRecords = [
-    0.007874015748031496, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-    0.015748031496062992, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-    0.023622047244094488, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,
-                       0, 0, 0,0
-  ];
+const params = ['Statistical Sciences','Medical Health Informatics','Neuroscience','Kinesiology','Microbiology and Immunology','Medical Sciences'];
+//const params = ['Rehabilitation Sciences','Physiology and Pharmacology','Physiology and Pharmacology','Microbiology and Immunology','Microbiology and Immunology','Medical Sciences'];
+//const params = ['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'];
+//const params = ['Transitional Justice','Mathematics','Software Engineering','Software Engineering','Software Engineering','Mathematics'];
+//const params = ['Mechatronic Systems Engineering','Hebrew','Hindu','World Literatures and Cultures','Mathematics','Theatre Studies'];
+const otherRecords = require('../utils/otherRecords');
 
 (async function(params,otherRecords) {
     await arrayting(params).then(data => {
-        console.log(cos(data,otherRecords))
-        
+        otherRecords.forEach(element => {
+            console.log(cos(data,element))
+        });
     })
 })(params, otherRecords)
 
