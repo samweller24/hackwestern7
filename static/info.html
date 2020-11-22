@@ -11,24 +11,33 @@
         <li><a href="suggestions.html">Suggestions</a></li>
     </ul>
     <h1>Info</h1>
-    <div id="mainFrame">
-        <div id="myInfoLeft">
+    <div class="mainFrame">
+        <div class="myInfoLeft">
             <form>
-                <label for="studentName">Student Name:</label><br>
-                <input name="studentName" type="text"><br>
-                <label for="studentEmail">Student Email:</label><br>
-                <input name="studentEmail" type="text"><br>
-                <label for="currentYear">Current Year:</label><br>
-                <input name="currentYear" type="number"><br>
-                <button>Update Info</button>
+                <label class="inputsTitle" for="courseYear">User Data</label><br>
+                <p></p>
+                <label class="inputs2" for="studentName">Student Name</label><br>
+                <input class="inputs2" name="studentName" type="text" placeholder="eg. John Doe"><br>
+                <label class="inputs2" for="studentEmail">Student Email</label><br>
+                <input class="inputs2" name="studentEmail" type="text" placeholder="eg. example@uwo.ca"><br>
+                <label class="inputs2" for="currentYear">Current Year</label><br>
+                <input class="inputs2" name="currentYear" type="number" placeholder="eg. 1"><br>
+                <button class="inputs">Update Info</button>
             </form>
         </div>
-        <div id="myInfoRight">
+        <div class="myInfoRight">
             <form>
-                <label for="courseYear">Year:</label><br>
-                <input name="courseYear" type="text">
-                <button>Submit</button><br>
-                <input id="courseInput" type="text">
+                <label class="inputsTitle"  for="courseYear">Courses</label><br>
+                <p></p>
+                <label class="inputs" for="courseYear">Year</label>
+                <button id="submitButton">Submit</button><br>
+                <input name="courseYear" class="inputs" type="text" placeholder="Year">
+                <input name="courseYear" class="inputs" type="text" placeholder="Course Name">
+                <input name="courseYear" class="inputs" type="text" placeholder="Course Name">
+                <input name="courseYear" class="inputs" type="text" placeholder="Course Name">
+                <input name="courseYear" class="inputs" type="text" placeholder="Course Name">
+                <input name="courseYear" class="inputs" type="text" placeholder="Course Name">
+                
             </form>
         </div>
     </div>
