@@ -1,6 +1,5 @@
 let courseMap = new Map()
-
-const temp = [
+const temp1 = [
     0.007874015748031496, 0, 0,
                        0, 0, 0,
                        0, 0, 0,
@@ -42,7 +41,56 @@ const temp = [
     0.023622047244094488, 0, 0,
                        0, 0, 0,
                        0, 0, 0,
-                       0, 0, 0, 0 ]
-courseMap.set(temp.toString,['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'])
+                       0, 0, 0,
+                       0
+  ]
+  
+const temp = [
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+0.015748031496062992, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+0.007874015748031496, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+0.023622047244094488, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0, 0, 0,
+    0
+]
+courseMap.set(temp.toString,['Psychology','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'])
+courseMap.set(temp1.toString,['Actuarial Science','Software Engineering','Software Engineering','Software Engineering','Mathematics','Mathematics'])
 
-  module.exports = courseMap
+module.exports = courseMap
